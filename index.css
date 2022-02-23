@@ -12,8 +12,8 @@ body{
 
 .grid-container{
     display:grid;
-    grid-template-rows: 400px 1fr;
-    grid-template-columns:repeat(9, 1fr);
+    grid-template-rows: 400px 100px;
+    grid-template-columns:repeat(9, minmax(50px,100px));
     justify-content: center;
     margin:10px;
 }
