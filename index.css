@@ -12,8 +12,8 @@ body{
 
 .grid-container{
     display:grid;
-    grid-template-rows: 400px 100px;
-    grid-template-columns:repeat(9, minmax(50px,100px));
+    grid-template-columns:repeat(9, minmax(80px,100px));
+    grid-template-rows: 400px minmax(80px,100px);
     justify-content: center;
     margin:10px;
 }
@@ -36,4 +36,11 @@ body{
     width: 100%;
     object-position: center center;
     object-fit:cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container{
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: 400px repeat(3, minmax(50px,100px));
+    }
 }
